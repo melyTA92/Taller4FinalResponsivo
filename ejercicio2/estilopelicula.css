@@ -1,0 +1,248 @@
+*{
+	box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+body{
+		width: 98%;
+		margin-left: auto;
+		margin-right: auto;
+
+		font-family: "Verdana";
+
+}
+.container{
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 5px;
+}
+h1{
+		font-family: 'Anton', sans-serif;
+		color:  #414239;
+
+		margin: 0px;
+	}
+h2{
+		font-family: 'Lobster', cursive;
+		color:  #9e0947;
+}
+video{
+	max-width: 100%;
+	visibility: visible;
+	display: block;
+	height: 200px;
+}
+h4{
+	color: #ce105c;
+}
+li[famoso="principal"]{
+	font-weight: bold;
+}
+li[famoso="secundario"]{
+	font-style: italic;
+}
+ul{
+	list-style-image: url('https://goo.gl/6hPSSH');
+	margin-right: 3em;
+}
+img{
+	max-width: 100%;
+	margin-right: 0%;
+	height: 200px;
+}
+img:hover{
+	opacity: 0.8;
+}
+#cont1, #cont2, #cont3{
+
+	border-style: dotted;
+	border-width: 0.08em;
+	border-color: #d7d8cb;
+}
+
+#titulo1, #titulo2, #titulo3{
+	margin: 1%;
+}
+[name="cajas-cont-1"] h4{
+	margin-top: 1%; 
+	margin-bottom: 1%;
+}
+p{
+	text-align: justify;
+	padding-left: 5px;
+}
+
+/*DESKTOPS*/
+@media only screen and (min-width: 992px){
+	.col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 25%;}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}
+	
+	h1{
+		font-size: 4em;
+	}
+	
+	h4{
+		font-size: 1em;
+	}
+
+	.container{
+		width: 970px;
+	}
+
+	
+}
+
+/*TABLES*/
+@media only screen and (min-width: 768px) and (max-width: 990px){
+	.col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+
+	.page-header{
+		background-color: grey;
+	}
+	h1{
+		padding: 2%;
+		font-size: 1.5em;
+		color: white;
+
+		text-align: center;
+	}
+	.caja1, .caja2{
+		display: none;
+	}
+	.caja3{
+		width: 100%;
+		position: absolute;
+    	top: 220px;
+	}
+	#cont3{
+	clear: left;
+	}
+	ul{
+		list-style-image: none;
+		list-style: none;
+		margin: 0%;
+		padding: 0%;
+
+		text-align: justify;
+	}
+
+	li{
+		float: left;
+		font-size: x-small;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+	li::after{
+		content: ", ";
+	}
+	#titulo1, #titulo2, #titulo3{
+		font-size: 20px;
+    	text-align: center;
+
+	}
+	.caja4{
+		margin-bottom: 80px;
+	}
+	.caja3{
+		width: 100%;
+	    position: absolute;
+	    top: 240px;
+	}
+	div#cont1, #cont2, #cont3 {
+    	position: relative;
+	}
+}
+
+/*SMARTPHONES*/
+@media only screen and (max-width: 768px){
+	[class*="col-"] {
+    	width: 100%;
+	}
+	.col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+
+	#cont1 .caja3, .caja4, #tit-sinopsis, #cont2 .caja2, #cont3 .caja2, li[famoso="secundario"]{
+		display: none;
+	}
+	h1{
+		text-align: center;
+		font-size: 2em;
+
+		margin-top: 0%;
+		margin-bottom: 0%;
+	}
+
+	ul{
+		list-style-image: none;
+		list-style: none;
+		margin: 0%;
+		padding: 0%;
+
+		text-align: justify;
+	}
+
+	li{
+		float: left;
+		font-size: x-small;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+	li::after{
+		content: ", ";
+	}
+	#cont1,#cont2,#cont3{
+		border-style: none;
+	}
+	#cont1{
+		border-bottom: 0.3em dotted #d7d8cb;
+	}
+	h2{
+		font-size: 16px;
+	}
+	div#cont2, #cont3 {
+    position: relative;
+    margin-top: 10px;
+}
+	h2#titulo2, #titulo3 {
+	    position: absolute;
+	    z-index: 2;
+	    background: #F0F8FF;
+	    opacity: 0.8;
+	}
+	p{
+		font-size: 11px;
+	}
+	.caja1{
+		padding-right: 0px;
+	}
+}
